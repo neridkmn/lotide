@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) { // can only compare primitive values
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const countLetters = function(arg) {
   const lowerCase = arg.toLowerCase();
   let lettersToReturn = {};
@@ -21,12 +13,4 @@ const countLetters = function(arg) {
   return lettersToReturn;
 };
 
-
-
-
-
-const result1 = countLetters("Today is Tuesday");
-assertEqual(result1["t"], 2);
-assertEqual(result1["c"], undefined);
-assertEqual(result1["u"], 1);
-assertEqual(result1[" "], undefined);
+module.exports = countLetters;
